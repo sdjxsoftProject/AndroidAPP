@@ -24,7 +24,7 @@ public class StartApp extends Activity {
 		View view=View.inflate(this, R.layout.startapp, null);
 		setContentView(view);
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(1500);
 			long sde=5000;
 			AlphaActivtity.alphaDraw(0.0f, 1.0f, sde,view, interfacls);
 		} catch (InterruptedException e) {
