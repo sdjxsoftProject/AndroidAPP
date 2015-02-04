@@ -17,35 +17,45 @@ import android.view.View;
  */
 public class StartApp extends Activity {
 	@Override
+	 
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO 自动生成的方法存根
 		super.onCreate(savedInstanceState);
-		View view=findViewById(R.layout.startapp);
+		View view=View.inflate(this, R.layout.startapp, null);
 		setContentView(view);
-		InterfaceCls interfaceCls=new InterfaceCls() {
-			
-			@Override
-			public void execStartAlphaAnimation() {
-				// TODO 自动生成的方法存根
-				
-			}
-			
-			@Override
-			public void execRepeatAlphaAnimation() {
-				// TODO 自动生成的方法存根
-				
-			}
-			
-			@Override
-			public void execEndAlphaAnimation() {
-				// TODO 自动生成的方法存根
-				skipPage();
-			}
-		};
-		skipPage();
-		//AlphaActivtity.alphaDraw(1.0f, 0.3f, 5000, view, interfaceCls);
+		try {
+			Thread.sleep(1000);
+			long sde=5000;
+			AlphaActivtity.alphaDraw(0.0f, 1.0f, sde,view, interfacls);
+		} catch (InterruptedException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
+		
 		
 	}
+
+	
+	InterfaceCls interfacls=new InterfaceCls() {
+		
+		@Override
+		public void execStartAlphaAnimation() {
+			// TODO 自动生成的方法存根
+			
+		}
+		
+		@Override
+		public void execRepeatAlphaAnimation() {
+			// TODO 自动生成的方法存根
+			
+		}
+		
+		@Override
+		public void execEndAlphaAnimation() {
+			// TODO 自动生成的方法存根
+			skipPage();
+		}
+	};
 	
 	public void skipPage()
 	{
